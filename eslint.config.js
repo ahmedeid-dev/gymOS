@@ -18,5 +18,6 @@ export default defineConfig([
     languageOptions: {
       globals: globals.browser,
     },
+    'no-unused-vars': 'warn', // Disable no-unused-vars rule globally
   },
 ])
