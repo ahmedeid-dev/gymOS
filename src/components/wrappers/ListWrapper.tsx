@@ -35,7 +35,6 @@ export default function ListWrapper() {
                 <Breadcrumbs
                     icons={icons}
                 />
-                <button onClick={toggleDrawer}>Toggle Drawer</button>
             </Box>
 
             <Box
@@ -46,11 +45,11 @@ export default function ListWrapper() {
                     position: "relative",
                 }}
             >
-                <FiltersDrawer
+                {openDrawer && <FiltersDrawer
                     openDrawer={!!openDrawer}
                 >
                     <TextInputField />
-                </FiltersDrawer>
+                </FiltersDrawer>}
                 <MainTable />
             </Box>
         </Box>
