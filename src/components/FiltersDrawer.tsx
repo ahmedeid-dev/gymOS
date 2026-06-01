@@ -14,7 +14,7 @@ export default function FiltersDrawer({
   return (
     <Drawer
       variant="persistent"
-      anchor={"right"}
+      anchor={"left"}
       open={openDrawer}
       onClose={() => false}
       sx={{
