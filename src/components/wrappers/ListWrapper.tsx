@@ -1,11 +1,10 @@
 import { Box } from "@mui/material";
+import { useState } from "react";
 import Breadcrumbs from "../Breadcrumbs";
-import MainTable from "../Table";
 import FiltersDrawer from "../FiltersDrawer";
 import TextInputField from "../inputs/TextInputField";
-import { useState } from "react";
 
-export default function ListWrapper() {
+export default function ListWrapper({ children }: { children: React.ReactNode }) {
 
     const [openDrawer, setOpenDrawer] = useState(false);
     const toggleDrawer = () => setOpenDrawer(prevOpen => !prevOpen);
@@ -50,7 +49,7 @@ export default function ListWrapper() {
                 >
                     <TextInputField />
                 </FiltersDrawer>}
-                <MainTable />
+                {children}
             </Box>
         </Box>
     )
