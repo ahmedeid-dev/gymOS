@@ -22,12 +22,11 @@ import MuiAppBar from '@mui/material/AppBar';
 import type { Theme } from '@mui/material/styles';
 import { styled, useTheme } from '@mui/material/styles';
 import type { CSSObject } from '@mui/system';
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { PATH } from '../utils/path';
 import Navbar from './Navbar';
-import ListWrapper from './wrappers/ListWrapper';
 
 const _drawerWidth = 240;
 
@@ -119,7 +118,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
-export default function MiniDrawer() {
+export default function MainLayout({ children }: { children: ReactNode }) {
     const { t } = useTranslation();
     const theme = useTheme();
     const [open, setOpen] = useState<boolean>(false);
@@ -218,7 +217,7 @@ export default function MiniDrawer() {
                 </List>
             </Drawer>
             <Box component="main" sx={{ flexGrow: 1 }}>
-                <ListWrapper />
+                {children}
                 {/* <Breadcrumbs />
                 <MainTable /> */}
             </Box>
