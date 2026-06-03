@@ -1,11 +1,9 @@
-import MiniDrawer from './components/Drawer'
-import Navbar from './components/Navbar'
-
+import { Outlet } from "react-router-dom";
+import MainLayout from "./components/Layout";
 export default function App() {
   return (
-    <>
-      {/* <Navbar /> */}
-      <MiniDrawer />
-    </>
+    <MainLayout>
+      <Outlet />
+    </MainLayout>
   )
 }
