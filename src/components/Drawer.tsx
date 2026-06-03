@@ -1,9 +1,8 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     ChevronLeft as ChevronLeftIcon,
     ChevronRight as ChevronRightIcon,
-    MoveToInbox as InboxIcon,
-    Mail as MailIcon,
-    Menu as MenuIcon,
+    Menu as MenuIcon
 } from '@mui/icons-material';
 import {
     Box,
@@ -16,8 +15,7 @@ import {
     ListItemIcon,
     ListItemText,
     Drawer as MuiDrawer,
-    Toolbar,
-    Typography,
+    Toolbar
 } from '@mui/material';
 import type { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import MuiAppBar from '@mui/material/AppBar';
@@ -25,15 +23,22 @@ import type { Theme } from '@mui/material/styles';
 import { styled, useTheme } from '@mui/material/styles';
 import type { CSSObject } from '@mui/system';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { PATH } from '../utils/path';
 import Navbar from './Navbar';
-import MainTable from './Table';
-import Breadcrumbs from './Breadcrumbs';
 import ListWrapper from './wrappers/ListWrapper';
 
-const drawerWidth = 240;
+const _drawerWidth = 240;
 
+const StyledIcon = styled(FontAwesomeIcon)<{ active: boolean }>(({ theme, active }) => ({
+    color: active ? theme.palette.primary.dark : "inherit",
+    "&:hover": {
+        color: theme.palette.primary.dark,
+    },
+}));
 const openedMixin = (theme: Theme): CSSObject => ({
-    width: drawerWidth,
+    width: _drawerWidth,
     transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.enteringScreen,
@@ -78,8 +83,8 @@ const AppBar = styled(MuiAppBar, {
         {
             props: ({ open }) => open,
             style: {
-                marginLeft: drawerWidth,
-                // width: `calc(100% - ${drawerWidth}px)`,
+                marginLeft: _drawerWidth,
+                // width: `calc(100% - ${_drawerWidth}px)`,
                 transition: theme.transitions.create(['width', 'margin'], {
                     easing: theme.transitions.easing.sharp,
                     duration: theme.transitions.duration.enteringScreen,
@@ -91,7 +96,7 @@ const AppBar = styled(MuiAppBar, {
 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
     ({ theme }) => ({
-        width: drawerWidth,
+        width: _drawerWidth,
         flexShrink: 0,
         whiteSpace: 'nowrap',
         boxSizing: 'border-box',
@@ -115,12 +120,14 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 export default function MiniDrawer() {
+    const { t } = useTranslation();
     const theme = useTheme();
     const [open, setOpen] = useState<boolean>(false);
     const handleToggleDrawer: () => void = () => setOpen((prevOpen) => !prevOpen);
-
-    const handleDrawerOpen: () => void = () => setOpen(true);
-
+    const navigate = useNavigate();
+    const pathname = useLocation().pathname;
+    // const activePath = PATH.find(({ path }) => pathname.startsWith(path));
+    console.log(pathname);
     const handleDrawerClose: () => void = () => setOpen(false);
 
     return (
@@ -153,9 +160,11 @@ export default function MiniDrawer() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+                    {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => ( */}
+                    {PATH?.map(({ name, path, icon }, index) => (
+                        <><ListItem key={index} disablePadding sx={{ display: 'block' }}>
                             <ListItemButton
+                                onClick={() => navigate(path)}
                                 sx={[
                                     {
                                         minHeight: 48,
@@ -185,10 +194,12 @@ export default function MiniDrawer() {
                                             },
                                     ]}
                                 >
-                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                    <StyledIcon
+                                        active={pathname === path}
+                                        icon={[icon?.prefix ?? "fas", icon?.name ?? "question"]} />
                                 </ListItemIcon>
                                 <ListItemText
-                                    primary={text}
+                                    primary={t(name)}
                                     sx={[
                                         open
                                             ? {
@@ -201,58 +212,8 @@ export default function MiniDrawer() {
                                 />
                             </ListItemButton>
                         </ListItem>
-                    ))}
-                </List>
-                <Divider />
-                <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                        <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-                            <ListItemButton
-                                sx={[
-                                    {
-                                        minHeight: 48,
-                                        px: 2.5,
-                                    },
-                                    open
-                                        ? {
-                                            justifyContent: 'initial',
-                                        }
-                                        : {
-                                            justifyContent: 'center',
-                                        },
-                                ]}
-                            >
-                                <ListItemIcon
-                                    sx={[
-                                        {
-                                            minWidth: 0,
-                                            justifyContent: 'center',
-                                        },
-                                        open
-                                            ? {
-                                                mr: 3,
-                                            }
-                                            : {
-                                                mr: 'auto',
-                                            },
-                                    ]}
-                                >
-                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                                </ListItemIcon>
-                                <ListItemText
-                                    primary={text}
-                                    sx={[
-                                        open
-                                            ? {
-                                                opacity: 1,
-                                            }
-                                            : {
-                                                opacity: 0,
-                                            },
-                                    ]}
-                                />
-                            </ListItemButton>
-                        </ListItem>
+                            {index === 0 && <Divider />}
+                        </>
                     ))}
                 </List>
             </Drawer>
