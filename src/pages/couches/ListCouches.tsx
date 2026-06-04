@@ -4,8 +4,8 @@ import {
     TableRow,
 } from '@mui/material';
 import { useCallback, useMemo } from 'react';
-import MainTable from '../../components/Table';
-import TablePagination from '../../components/TablePagination';
+import MainTable from '../../components/tables/Table';
+import TablePagination from '../../components/tables/TablePagination';
 import ListWrapper from '../../components/wrappers/ListWrapper';
 
 export default function ListCouches() {
