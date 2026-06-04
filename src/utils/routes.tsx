@@ -5,7 +5,8 @@ const App = lazy(() => import('../App'));
 const ListCouches = lazy(() => import('../pages/couches/ListCouches'));
 const ViewCouch = lazy(() => import('../pages/couches/ViewCouch'));
 const FormCouch = lazy(() => import('../pages/couches/FormCouch'));
-
+const ListClients = lazy(() => import('../pages/clients/ListClients'));
+const ViewClient = lazy(() => import('../pages/clients/ViewClient'));
 
 export const ROUTES: RouteObject[] = [
     {
@@ -41,20 +42,17 @@ export const ROUTES: RouteObject[] = [
             },
             {
                 path: 'clients',
-                element: <App />,
+                element: <ListClients />,
                 children: [
-                    {
-                        index: true,
-                        element: <App />,
-                    },
+
                     {
                         path: ":id",
-                        element: <div>Client</div>,
+                        element: <ViewClient />,
                     },
                 ],
             }
         ],
-    }
+    },
     // {
     //     path: '*',
     //     element: <h1>404 Not Found</h1>,
