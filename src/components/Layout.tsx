@@ -125,8 +125,6 @@ export default function MainLayout({ children }: { children: ReactNode }) {
     const handleToggleDrawer: () => void = () => setOpen((prevOpen) => !prevOpen);
     const navigate = useNavigate();
     const pathname = useLocation().pathname;
-    // const activePath = PATH.find(({ path }) => pathname.startsWith(path));
-    console.log(pathname);
     const handleDrawerClose: () => void = () => setOpen(false);
 
     return (
@@ -218,8 +216,6 @@ export default function MainLayout({ children }: { children: ReactNode }) {
             </Drawer>
             <Box component="main" sx={{ flexGrow: 1 }}>
                 {children}
-                {/* <Breadcrumbs />
-                <MainTable /> */}
             </Box>
         </Box>
     );
