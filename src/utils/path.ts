@@ -11,7 +11,7 @@ interface Icon {
 export const PATH: Icon[] = [
     {
         name: 'Dashboard',
-        path: '/',
+        path: '/admin',
         icon: {
             name: "tachometer-alt",
             prefix: "fas",
