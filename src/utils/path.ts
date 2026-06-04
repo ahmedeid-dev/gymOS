@@ -20,7 +20,7 @@ export const PATH: Icon[] = [
     // ! couches
     {
         name: 'Couches',
-        path: '/couches',
+        path: 'admin/couches',
         icon: {
             name: "person-running",
             prefix: "fas",
@@ -29,7 +29,7 @@ export const PATH: Icon[] = [
     // ! clients
     {
         name: 'Clients',
-        path: '/clients',
+        path: 'admin/clients',
         icon: {
             name: "user-friends",
             prefix: "fas",
@@ -38,7 +38,7 @@ export const PATH: Icon[] = [
     // ! exercises
     {
         name: 'Exercises',
-        path: '/exercises',
+        path: 'admin/exercises',
         icon: {
             name: "dumbbell",
             prefix: "fas",
@@ -47,7 +47,7 @@ export const PATH: Icon[] = [
     // ! subscriptions
     {
         name: 'Subscriptions',
-        path: '/subscriptions',
+        path: 'admin/subscriptions',
         icon: {
             name: "bell",
             prefix: "fas",
@@ -56,7 +56,7 @@ export const PATH: Icon[] = [
     // ! tools
     {
         name: 'Tools',
-        path: '/tools',
+        path: 'admin/tools',
         icon: {
             name: "tools",
             prefix: "fas",
@@ -65,7 +65,7 @@ export const PATH: Icon[] = [
     // ! settings
     {
         name: 'Settings',
-        path: '/settings',
+        path: 'admin/settings',
         icon: {
             name: "cog",
             prefix: "fas",
