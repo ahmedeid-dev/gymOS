@@ -73,10 +73,10 @@ export default function ListCouches() {
                     <TableCell component="th" scope="row">
                         {row.name}
                     </TableCell>
-                    <TableCell align="right">{row.calories}</TableCell>
-                    <TableCell align="right">{row.fat}</TableCell>
-                    <TableCell align="right">{row.carbs}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
+                    <TableCell>{row.calories}</TableCell>
+                    <TableCell>{row.fat}</TableCell>
+                    <TableCell>{row.carbs}</TableCell>
+                    <TableCell>{row.protein}</TableCell>
                 </TableRow>
             ))}
         </MuiTableBody>
@@ -85,7 +85,7 @@ export default function ListCouches() {
         <TablePagination />
     ), []);
     return (
-        <ListWrapper>
+        <ListWrapper isEmpty={rows?.length === 0}>
             <MainTable
                 TableHeaderArray={ListCouchesHeader}
                 TableBody={ListCouchesBody}
