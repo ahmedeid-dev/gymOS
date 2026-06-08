@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { useState } from "react";
 import Breadcrumbs from "../Breadcrumbs";
 import FiltersDrawer from "../FiltersDrawer";
+import Footer from "../Footer";
 import TextInputField from "../inputs/TextInputField";
 import EmptyTable from "../tables/EmptyTable";
 
@@ -13,7 +14,7 @@ export default function ListWrapper({
     isEmpty?: boolean;
 }) {
 
-    const [openDrawer, setOpenDrawer] = useState(false);
+    const [openDrawer, setOpenDrawer] = useState(true);
     const toggleDrawer = () => setOpenDrawer(prevOpen => !prevOpen);
     const icons = [
         {
@@ -61,6 +62,7 @@ export default function ListWrapper({
                     <EmptyTable />
                 ) : children}
             </Box>
+            <Footer />
         </Box>
     )
 }
