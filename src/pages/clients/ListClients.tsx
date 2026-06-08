@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import MainTable from '../../components/tables/Table';
-import ListWrapper from '../../components/wrappers/ListWrapper';
 import TablePagination from '../../components/tables/TablePagination';
+import ListWrapper from '../../components/wrappers/ListWrapper';
 
 export default function ListClients() {
     const ListClientsArray = useMemo(() => ([
@@ -27,8 +27,10 @@ export default function ListClients() {
     const ListCouchesPagination = useMemo(() => (
         <TablePagination />
     ), []);
+    const rows = useMemo(() => (
+        []), []);
     return (
-        <ListWrapper>
+        <ListWrapper isEmpty={rows?.length === 0}>
             <MainTable
                 TableHeaderArray={ListClientsArray}
                 TablePagination={ListCouchesPagination}
