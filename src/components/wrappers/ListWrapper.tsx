@@ -3,8 +3,15 @@ import { useState } from "react";
 import Breadcrumbs from "../Breadcrumbs";
 import FiltersDrawer from "../FiltersDrawer";
 import TextInputField from "../inputs/TextInputField";
+import EmptyTable from "../tables/EmptyTable";
 
-export default function ListWrapper({ children }: { children: React.ReactNode }) {
+export default function ListWrapper({
+    children,
+    isEmpty = false,
+}: {
+    children: React.ReactNode;
+    isEmpty?: boolean;
+}) {
 
     const [openDrawer, setOpenDrawer] = useState(false);
     const toggleDrawer = () => setOpenDrawer(prevOpen => !prevOpen);
@@ -42,6 +49,7 @@ export default function ListWrapper({ children }: { children: React.ReactNode })
                     flex: 1,
                     overflow: "hidden",
                     position: "relative",
+                    flexGrow: 1,
                 }}
             >
                 {openDrawer && <FiltersDrawer
@@ -49,7 +57,9 @@ export default function ListWrapper({ children }: { children: React.ReactNode })
                 >
                     <TextInputField />
                 </FiltersDrawer>}
-                {children}
+                {isEmpty ? (
+                    <EmptyTable />
+                ) : children}
             </Box>
         </Box>
     )
