@@ -15,7 +15,7 @@ export default function SubmitButton({
             type={type}
             onClick={onSubmit}
             fullWidth
-            variant={"outlined"}
+            variant={"contained"}
             {...props}
         >
             {label}
