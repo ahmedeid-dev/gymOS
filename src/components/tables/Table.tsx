@@ -7,10 +7,6 @@ import {
     TableHead,
     TableRow
 } from '@mui/material';
-import Skeleton from '../skeleton';
-
-
-
 
 export default function MainTable({
     TableHeaderArray,
@@ -38,6 +34,7 @@ export default function MainTable({
                     width: "100%",
                     height: "100%",
                     overflow: "auto",
+                    position: "relative",
                 }}
                 id="floating-head-table-container"
             >
@@ -68,7 +65,6 @@ export default function MainTable({
                             ))}
                         </TableRow>
                     </TableHead>
-                    <Skeleton />
                     {TableBody && TableBody}
                     <MuiTableFooter>
                         <TableRow sx={{
