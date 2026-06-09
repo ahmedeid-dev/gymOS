@@ -1,0 +1,170 @@
+//ToDo
+
+//DONE
+
+//TODO
+
+- Add a way to set the screen resolution
+- Add a way to set the screen color depth
+- Add a way to set the screen refresh rate
+- Add a way to set the screen mode
+- Add a way to set the screen orientation
+- Add a way to set the screen rotation
+- Add a way to set the screen brightness
+- Add a way to set the screen contrast
+- Add a way to set the screen gamma
+- Add a way to set the screen power state
+- Add a way to set the screen blanking state
+- Add a way to set the screen saver state
+- Add a way to set the screen cursor state
+- Add a way to set the screen cursor blink rate
+- Add a way to set the screen cursor blink state
+- Add a way to set the screen cursor shape
+- Add a way to set the screen cursor color
+- Add a way to set the screen text color
+- Add a way to set the screen background color
+- Add a way to set the screen window color
+- Add a way to set the screen border color
+- Add a way to set the screen scroll region
+- Add a way to set the screen scroll position
+- Add a way to set the screen scroll size
+- Add a way to set the screen font
+- Add a way to set the screen font size
+- Add a way to set the screen font style
+- Add a way to set the screen font color
+- Add a way to set the screen font background color
+- Add a way to set the screen font underline
+- Add a way to set the screen font overline
+- Add a way to set the screen font strikethrough
+- Add a way to set the screen character size
+- Add a way to set the screen character spacing
+- Add a way to set the screen character offset
+- Add a way to set the screen line spacing
+- Add a way to set the screen line offset
+- Add a way to set the screen tab spacing
+- Add a way to set the screen tab offset
+- Add a way to set the screen bitmap
+- Add a way to set the screen bitmap size
+- Add a way to set the screen bitmap color
+- Add a way to set the screen bitmap background color
+- Add a way to set the screen bitmap opacity
+- Add a way to set the screen bitmap position
+- Add a way to set the screen bitmap clip
+- Add a way to set the screen bitmap mask
+- Add a way to set the screen bitmap transform
+- Add a way to set the screen bitmap rotation
+- Add a way to set the screen bitmap mirror
+- Add a way to set the screen bitmap flip
+- Add a way to set the screen bitmap stretch
+- Add a way to set the screen bitmap tile
+- Add a way to set the screen bitmap tile size
+- Add a way to set the screen bitmap tile offset
+- Add a way to set the screen bitmap tile clip
+- Add a way to set the screen bitmap tile mask
+- Add a way to set the screen bitmap tile transform
+- Add a way to set the screen bitmap tile rotation
+- Add a way to set the screen bitmap tile mirror
+- Add a way to set the screen bitmap tile flip
+- Add a way to set the screen bitmap tile stretch
+- Add a way to set the screen text
+- Add a way to set the screen text size
+- Add a way to set the screen text style
+- Add a way to set the screen text color
+- Add a way to set the screen text background color
+- Add a way to set the screen text underline
+- Add a way to set the screen text overline
+- Add a way to set the screen text strikethrough
+- Add a way to set the screen text alignment
+- Add a way to set the screen text rotation
+- Add a way to set the screen text mirror
+- Add a way to set the screen text flip
+- Add a way to set the screen text stretch
+- Add a way to set the screen text transform
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text opacity
+- Add a way to set the screen text position
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text transform
+- Add a way to set the screen text rotation
+- Add a way to set the screen text mirror
+- Add a way to set the screen text flip
+- Add a way to set the screen text stretch
+- Add a way to set the screen text transform
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text opacity
+- Add a way to set the screen text position
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text transform
+- Add a way to set the screen text rotation
+- Add a way to set the screen text mirror
+- Add a way to set the screen text flip
+- Add a way to set the screen text stretch
+- Add a way to set the screen text transform
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text opacity
+- Add a way to set the screen text position
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text transform
+- Add a way to set the screen text rotation
+- Add a way to set the screen text mirror
+- Add a way to set the screen text flip
+- Add a way to set the screen text stretch
+- Add a way to set the screen text transform
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text opacity
+- Add a way to set the screen text position
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text transform
+- Add a way to set the screen text rotation
+- Add a way to set the screen text mirror
+- Add a way to set the screen text flip
+- Add a way to set the screen text stretch
+- Add a way to set the screen text transform
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text opacity
+- Add a way to set the screen text position
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text transform
+- Add a way to set the screen text rotation
+- Add a way to set the screen text mirror
+- Add a way to set the screen text flip
+- Add a way to set the screen text stretch
+- Add a way to set the screen text transform
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text opacity
+- Add a way to set the screen text position
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text transform
+- Add a way to set the screen text rotation
+- Add a way to set the screen text mirror
+- Add a way to set the screen text flip
+- Add a way to set the screen text stretch
+- Add a way to set the screen text transform
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text opacity
+- Add a way to set the screen text position
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text transform
+- Add a way to set the screen text rotation
+- Add a way to set the screen text mirror
+- Add a way to set the screen text flip
+- Add a way to set the screen text stretch
+- Add a way to set the screen text transform
+- Add a way to set the screen text clip
+- Add a way to set the screen text mask
+- Add a way to set the screen text opacity
+- Add a way to set the screen text position
