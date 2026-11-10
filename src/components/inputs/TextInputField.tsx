@@ -40,11 +40,11 @@ export default function TextInputField({
                     variant="outlined"
                     required={required}
                     disabled={disabled}
-                    value={field.value}
-                    onChange={field.onChange}
-                    onBlur={field.onBlur}
-                    name={field.name}
-                    inputRef={field.ref}
+                    value={field?.value}
+                    onChange={field?.onChange}
+                    onBlur={field?.onBlur}
+                    name={field?.name}
+                    inputRef={field?.ref}
                     slotProps={{
                         input: {
                             readOnly: readOnly,
