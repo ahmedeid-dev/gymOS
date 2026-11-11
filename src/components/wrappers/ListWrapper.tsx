@@ -51,11 +51,13 @@ export default function ListWrapper({
                     flexGrow: 1,
                 }}
             >
+
                 {/* {openDrawer && <FiltersDrawer
                     openDrawer={!!openDrawer}
                 >
                     <TextInputField />
                 </FiltersDrawer>} */}
+
                 {isEmpty ? (
                     <EmptyTable />
                 ) : children}
