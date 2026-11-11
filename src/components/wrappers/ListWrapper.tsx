@@ -1,9 +1,7 @@
 import { Box } from "@mui/material";
 import { useState } from "react";
 import Breadcrumbs from "../Breadcrumbs";
-import FiltersDrawer from "../FiltersDrawer";
 import Footer from "../Footer";
-import TextInputField from "../inputs/TextInputField";
 import EmptyTable from "../tables/EmptyTable";
 
 export default function ListWrapper({
